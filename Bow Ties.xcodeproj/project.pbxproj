@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51C0B3E91C0EA87100DB63CC /* Bowtie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C0B3E71C0EA87100DB63CC /* Bowtie+CoreDataProperties.swift */; };
+		51C0B3EA1C0EA87100DB63CC /* Bowtie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C0B3E81C0EA87100DB63CC /* Bowtie.swift */; };
 		FEFA23E51B52BC7300D02E4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFA23E41B52BC7300D02E4B /* AppDelegate.swift */; };
 		FEFA23E71B52BC7300D02E4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFA23E61B52BC7300D02E4B /* ViewController.swift */; };
 		FEFA23EA1B52BC7300D02E4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEFA23E81B52BC7300D02E4B /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		51C0B3E71C0EA87100DB63CC /* Bowtie+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bowtie+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		51C0B3E81C0EA87100DB63CC /* Bowtie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bowtie.swift; sourceTree = "<group>"; };
 		FEFA23E11B52BC7300D02E4B /* Bow Ties.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bow Ties.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEFA23E41B52BC7300D02E4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEFA23E61B52BC7300D02E4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 		FEFA23E31B52BC7300D02E4B /* Bow Ties */ = {
 			isa = PBXGroup;
 			children = (
+				51C0B3E71C0EA87100DB63CC /* Bowtie+CoreDataProperties.swift */,
+				51C0B3E81C0EA87100DB63CC /* Bowtie.swift */,
 				FEFA23E41B52BC7300D02E4B /* AppDelegate.swift */,
 				FEFA23E61B52BC7300D02E4B /* ViewController.swift */,
 				FEFA23E81B52BC7300D02E4B /* Main.storyboard */,
@@ -144,6 +150,8 @@
 				FEFA23ED1B52BC7300D02E4B /* Bow_Ties.xcdatamodeld in Sources */,
 				FEFA23E71B52BC7300D02E4B /* ViewController.swift in Sources */,
 				FEFA23E51B52BC7300D02E4B /* AppDelegate.swift in Sources */,
+				51C0B3EA1C0EA87100DB63CC /* Bowtie.swift in Sources */,
+				51C0B3E91C0EA87100DB63CC /* Bowtie+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
