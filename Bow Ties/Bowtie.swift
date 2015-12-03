@@ -2,7 +2,7 @@
 //  Bowtie.swift
 //  Bow Ties
 //
-//  Created by Kerolos Nakhla on 12/1/15.
+//  Created by Kerolos Nakhla on 12/3/15.
 //  Copyright © 2015 Razeware. All rights reserved.
 //
 

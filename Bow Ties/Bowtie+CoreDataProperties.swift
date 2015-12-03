@@ -2,7 +2,7 @@
 //  Bowtie+CoreDataProperties.swift
 //  Bow Ties
 //
-//  Created by Kerolos Nakhla on 12/1/15.
+//  Created by Kerolos Nakhla on 12/3/15.
 //  Copyright © 2015 Razeware. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -14,13 +14,13 @@ import CoreData
 
 extension Bowtie {
 
-    @NSManaged var name: String?
     @NSManaged var isFavorite: NSNumber?
-    @NSManaged var lastWork: NSDate?
+    @NSManaged var lastWorn: NSDate?
+    @NSManaged var name: String?
+    @NSManaged var photoData: NSData?
     @NSManaged var rating: NSNumber?
     @NSManaged var searchKey: String?
-    @NSManaged var timesWork: NSNumber?
-    @NSManaged var photoData: NSData?
+    @NSManaged var timesWorn: NSNumber?
     @NSManaged var tintColor: NSObject?
 
 }
