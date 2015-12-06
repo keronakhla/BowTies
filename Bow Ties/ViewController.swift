@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         let request = NSFetchRequest(entityName: "Bowtie")
         let firstTitle = segmentedControl.titleForSegmentAtIndex(0)
         
-        request.predicate = NSPredicate(format: "SearchKey == %@", firstTitle!)
+        request.predicate = NSPredicate(format: "searchKey == %@", firstTitle!)
         
         do {
             let results = try managedContext.executeFetchRequest(request) as! [Bowtie]
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
     func insertSampleData() {
         let fetchRequest = NSFetchRequest(entityName: "Bowtie")
         
-        fetchRequest.predicate = NSPredicate(format: "SearchKey != nil")
+        fetchRequest.predicate = NSPredicate(format: "searchKey != nil")
         
         let count = managedContext.countForFetchRequest(fetchRequest, error: nil)
         
@@ -119,7 +119,18 @@ class ViewController: UIViewController {
   }
   
   @IBAction func wear(sender: AnyObject) {
+    let times = currentBowtie.timesWorn!.integerValue
+    currentBowtie.timesWorn = NSNumber(integer: (times+1))
     
+    currentBowtie.lastWorn = NSDate()
+    
+    do {
+        try managedContext.save()
+    } catch let error as NSError {
+        print("Could not save \(error), \(error.userInfo)")
+    }
+    
+    populate(currentBowtie)
   }
   
   @IBAction func rate(sender: AnyObject) {

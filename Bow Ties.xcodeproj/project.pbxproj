@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5105151A1C10E08C00FF95F5 /* Bowtie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510515181C10E08C00FF95F5 /* Bowtie+CoreDataProperties.swift */; };
-		5105151B1C10E08C00FF95F5 /* Bowtie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510515191C10E08C00FF95F5 /* Bowtie.swift */; };
+		510515321C14ED9000FF95F5 /* Bowtie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510515301C14ED9000FF95F5 /* Bowtie+CoreDataProperties.swift */; };
+		510515331C14ED9000FF95F5 /* Bowtie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510515311C14ED9000FF95F5 /* Bowtie.swift */; };
 		FEFA23E51B52BC7300D02E4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFA23E41B52BC7300D02E4B /* AppDelegate.swift */; };
 		FEFA23E71B52BC7300D02E4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFA23E61B52BC7300D02E4B /* ViewController.swift */; };
 		FEFA23EA1B52BC7300D02E4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEFA23E81B52BC7300D02E4B /* Main.storyboard */; };
@@ -19,8 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		510515181C10E08C00FF95F5 /* Bowtie+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bowtie+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		510515191C10E08C00FF95F5 /* Bowtie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bowtie.swift; sourceTree = "<group>"; };
+		510515301C14ED9000FF95F5 /* Bowtie+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bowtie+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		510515311C14ED9000FF95F5 /* Bowtie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bowtie.swift; sourceTree = "<group>"; };
 		FEFA23E11B52BC7300D02E4B /* Bow Ties.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bow Ties.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEFA23E41B52BC7300D02E4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEFA23E61B52BC7300D02E4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,8 +62,8 @@
 		FEFA23E31B52BC7300D02E4B /* Bow Ties */ = {
 			isa = PBXGroup;
 			children = (
-				510515181C10E08C00FF95F5 /* Bowtie+CoreDataProperties.swift */,
-				510515191C10E08C00FF95F5 /* Bowtie.swift */,
+				510515301C14ED9000FF95F5 /* Bowtie+CoreDataProperties.swift */,
+				510515311C14ED9000FF95F5 /* Bowtie.swift */,
 				FEFA23E41B52BC7300D02E4B /* AppDelegate.swift */,
 				FEFA23E61B52BC7300D02E4B /* ViewController.swift */,
 				FEFA23E81B52BC7300D02E4B /* Main.storyboard */,
@@ -150,8 +150,8 @@
 				FEFA23ED1B52BC7300D02E4B /* Bow_Ties.xcdatamodeld in Sources */,
 				FEFA23E71B52BC7300D02E4B /* ViewController.swift in Sources */,
 				FEFA23E51B52BC7300D02E4B /* AppDelegate.swift in Sources */,
-				5105151B1C10E08C00FF95F5 /* Bowtie.swift in Sources */,
-				5105151A1C10E08C00FF95F5 /* Bowtie+CoreDataProperties.swift in Sources */,
+				510515331C14ED9000FF95F5 /* Bowtie.swift in Sources */,
+				510515321C14ED9000FF95F5 /* Bowtie+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,7 +2,7 @@
 //  Bowtie+CoreDataProperties.swift
 //  Bow Ties
 //
-//  Created by Kerolos Nakhla on 12/3/15.
+//  Created by Kerolos Nakhla on 12/6/15.
 //  Copyright © 2015 Razeware. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
