@@ -19,7 +19,8 @@ class ViewController: UIViewController {
   @IBOutlet weak var lastWornLabel: UILabel!
   @IBOutlet weak var favoriteLabel: UILabel!
 
-  var managedContext: NSManagedObjectContext!
+    var managedContext: NSManagedObjectContext!
+    var currentBowtie: Bowtie!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +37,9 @@ class ViewController: UIViewController {
         
         do {
             let results = try managedContext.executeFetchRequest(request) as! [Bowtie]
-            //4
-            populate(results.first!)
+            
+            currentBowtie = results.first
+            populate(currentBowtie)
         } catch let error as NSError {
             print("Could not fetch\(error), \(error.userInfo)")
         }
@@ -117,7 +119,18 @@ class ViewController: UIViewController {
   }
   
   @IBAction func wear(sender: AnyObject) {
+    let times = currentBowtie.timesWorn!.integerValue
+    currentBowtie.timesWorn = NSNumber(integer: (times + 1))
     
+    currentBowtie.lastWorn = NSDate()
+    
+    do {
+        try managedContext.save()
+    } catch let error as NSError {
+        print("Could not save\(error), \(error.userInfo)")
+    }
+    
+    populate(currentBowtie)
   }
   
   @IBAction func rate(sender: AnyObject) {
