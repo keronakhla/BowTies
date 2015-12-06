@@ -134,7 +134,38 @@ class ViewController: UIViewController {
   }
   
   @IBAction func rate(sender: AnyObject) {
+    let alert = UIAlertController(title: "New Rating", message: "Rate this bow tie", preferredStyle: UIAlertControllerStyle.Alert)
+    
+    let cancelAction = UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction!) in })
+    
+    let saveAction = UIAlertAction(title: "Save", style: .Default, handler: { (action: UIAlertAction!) in
+        
+        let textField = alert.textFields![0] as UITextField
+        self.updateRating(textField.text!)
+        
+    })
+    
+    alert.addTextFieldWithConfigurationHandler { (textField: UITextField!) in textField.keyboardType = .DecimalPad }
+    
+    alert.addAction(cancelAction)
+    alert.addAction(saveAction)
+    
+    presentViewController(alert, animated: true, completion: nil)
     
   }
+
+
+    func updateRating(numericString: String) {
+        currentBowtie.rating = (numericString as NSString).doubleValue
+        
+        do {
+            try managedContext.save()
+            populate(currentBowtie)
+        } catch let error as NSError {
+            print("Could not save \(error), \(error.userInfo)")
+        }
+    }
+
+
 }
 
