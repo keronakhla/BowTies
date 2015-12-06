@@ -119,18 +119,7 @@ class ViewController: UIViewController {
   }
   
   @IBAction func wear(sender: AnyObject) {
-    let times = currentBowtie.timesWorn!.integerValue
-    currentBowtie.timesWorn = NSNumber(integer: (times + 1))
     
-    currentBowtie.lastWorn = NSDate()
-    
-    do {
-        try managedContext.save()
-    } catch let error as NSError {
-        print("Could not save\(error), \(error.userInfo)")
-    }
-    
-    populate(currentBowtie)
   }
   
   @IBAction func rate(sender: AnyObject) {
