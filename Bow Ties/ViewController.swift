@@ -20,8 +20,32 @@ class ViewController: UIViewController {
   @IBOutlet weak var favoriteLabel: UILabel!
 
   var managedContext: NSManagedObjectContext!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        //1
+        insertSampleData()
+        
+        //2 
+        let request = NSFetchRequest(entityName: "Bowtie")
+        let firstTitle = segmentedControl.titleForSegmentAtIndex(0)
+        
+        request.predicate = NSPredicate(format: "SearchKey == %@", firstTitle!)
+        
+        do {
+            let results = try managedContext.executeFetchRequest(request) as! [Bowtie]
+            //4
+            populate(results.first!)
+        } catch let error as NSError {
+            print("Could not fetch\(error), \(error.userInfo)")
+        }
+    }
+    
+    
   
-  // Insert sample data
+    // Insert sample data
 
     func insertSampleData() {
         let fetchRequest = NSFetchRequest(entityName: "Bowtie")
@@ -70,11 +94,6 @@ class ViewController: UIViewController {
     }
     
     
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-    
-  }
   
   @IBAction func segmentedControl(control: UISegmentedControl) {
     
