@@ -43,8 +43,6 @@ class ViewController: UIViewController {
         }
     }
     
-    
-  
     // Insert sample data
 
     func insertSampleData() {
@@ -94,6 +92,25 @@ class ViewController: UIViewController {
     }
     
     
+
+    func populate (bowtie: Bowtie) {
+        imageView.image = UIImage(data:bowtie.photoData!)
+        nameLabel.text = bowtie.name
+        ratingLabel.text = "Rating: \(bowtie.rating!.doubleValue)/5"
+        
+        timesWornLabel.text = "# times worn: \(bowtie.timesWorn!.integerValue)"
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = .ShortStyle
+        dateFormatter.timeStyle = .NoStyle
+        
+        lastWornLabel.text = "Last worn: " + dateFormatter.stringFromDate(bowtie.lastWorn!)
+        favoriteLabel.hidden = !bowtie.isFavorite!.boolValue
+        
+        view.tintColor = bowtie.tintColor as! UIColor
+    }
+    
+
   
   @IBAction func segmentedControl(control: UISegmentedControl) {
     
