@@ -146,7 +146,7 @@ class ViewController: UIViewController {
   }
   
   @IBAction func rate(sender: AnyObject) {
-    let alert = UIAlertController(title: "New Rating", message: "Rate this bow tie", preferredStyle: UIAlertControllerStyle.Alert)
+    let alert = UIAlertController(title: "New Rating", message: "Rate this bow tie out of 5", preferredStyle: UIAlertControllerStyle.Alert)
     
     let cancelAction = UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction!) in })
     
