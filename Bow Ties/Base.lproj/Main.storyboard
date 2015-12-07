@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="D6A-6c-CMM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Bow ties!-->
@@ -38,26 +39,19 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EnR-I9-dEq">
-                                <rect key="frame" x="20" y="538" width="70" height="30"/>
+                                <rect key="frame" x="20" y="538" width="272" height="30"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="hLT-LL-lkc"/>
-                                </constraints>
                                 <state key="normal" title="Wear">
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="wear:" destination="D6A-6c-CMM" eventType="touchUpInside" id="NdV-RF-KKT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ati-Lg-yYU">
-                                <rect key="frame" x="510" y="538" width="70" height="30"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Rate">
-                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="rate:" destination="D6A-6c-CMM" eventType="touchUpInside" id="pVU-mA-x37"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bow Tie Name Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIf-2w-giR">
@@ -85,31 +79,46 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Favorite*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ6-Gf-DxM">
-                                <rect key="frame" x="20" y="381" width="78" height="21"/>
+                                <rect key="frame" x="20" y="380" width="78" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ati-Lg-yYU">
+                                <rect key="frame" x="308" y="538" width="272" height="30"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Rate">
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="rate:" destination="D6A-6c-CMM" eventType="touchUpInside" id="pVU-mA-x37"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.69411766529083252" green="0.80000007152557373" blue="0.92941182851791382" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="SIf-2w-giR" firstAttribute="leading" secondItem="1W5-kt-XY7" secondAttribute="leading" constant="20" id="4Jz-4Q-7K6"/>
-                            <constraint firstItem="EnR-I9-dEq" firstAttribute="leading" secondItem="1W5-kt-XY7" secondAttribute="leading" constant="20" id="FEO-Lt-Lcz"/>
                             <constraint firstAttribute="trailing" secondItem="YiV-xl-Coj" secondAttribute="trailing" constant="20" id="FVy-LK-86a"/>
                             <constraint firstItem="YiV-xl-Coj" firstAttribute="top" secondItem="C4y-Om-Ol4" secondAttribute="bottom" constant="15" id="Gq1-f0-UnA"/>
                             <constraint firstItem="ZJ6-Gf-DxM" firstAttribute="top" secondItem="2wb-kG-ySj" secondAttribute="bottom" constant="8" id="Ijj-4p-i1g"/>
+                            <constraint firstItem="ati-Lg-yYU" firstAttribute="bottom" secondItem="EnR-I9-dEq" secondAttribute="bottom" id="N3W-1U-NZj"/>
                             <constraint firstItem="a7M-f1-rOM" firstAttribute="top" secondItem="IV4-TH-3IP" secondAttribute="bottom" constant="8" id="PbQ-Z4-zVJ"/>
+                            <constraint firstItem="tyK-p3-jhs" firstAttribute="top" secondItem="EnR-I9-dEq" secondAttribute="bottom" constant="32" id="Prd-L9-RQk"/>
                             <constraint firstItem="2wb-kG-ySj" firstAttribute="leading" secondItem="ZJ6-Gf-DxM" secondAttribute="leading" id="RH0-hd-0YB"/>
-                            <constraint firstItem="ati-Lg-yYU" firstAttribute="bottom" secondItem="EnR-I9-dEq" secondAttribute="bottom" id="VKa-iR-QCb"/>
+                            <constraint firstItem="ati-Lg-yYU" firstAttribute="width" secondItem="EnR-I9-dEq" secondAttribute="width" id="XNL-Fw-j7e"/>
                             <constraint firstItem="2wb-kG-ySj" firstAttribute="leading" secondItem="SIf-2w-giR" secondAttribute="leading" id="XTe-3m-qwl"/>
-                            <constraint firstItem="ati-Lg-yYU" firstAttribute="width" secondItem="EnR-I9-dEq" secondAttribute="width" id="Yp2-zB-MkW"/>
-                            <constraint firstItem="tyK-p3-jhs" firstAttribute="top" secondItem="EnR-I9-dEq" secondAttribute="bottom" constant="32" id="bIE-dx-2Bh">
-                                <variation key="heightClass=compact" constant="10"/>
-                            </constraint>
+                            <constraint firstAttribute="leadingMargin" secondItem="EnR-I9-dEq" secondAttribute="leading" id="Zql-ah-o9L"/>
                             <constraint firstItem="SIf-2w-giR" firstAttribute="leading" secondItem="IV4-TH-3IP" secondAttribute="leading" id="bl8-UW-kNX"/>
-                            <constraint firstAttribute="trailing" secondItem="ati-Lg-yYU" secondAttribute="trailing" constant="20" id="c6a-YS-mmL"/>
+                            <constraint firstItem="ati-Lg-yYU" firstAttribute="leading" secondItem="EnR-I9-dEq" secondAttribute="trailing" constant="17" id="cQ6-hB-h2z"/>
                             <constraint firstItem="C4y-Om-Ol4" firstAttribute="leading" secondItem="1W5-kt-XY7" secondAttribute="leading" constant="20" id="f3o-RI-G75"/>
                             <constraint firstItem="SIf-2w-giR" firstAttribute="leading" secondItem="a7M-f1-rOM" secondAttribute="leading" id="i37-lV-yzZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ati-Lg-yYU" secondAttribute="trailing" id="l8X-3e-jm3"/>
                             <constraint firstItem="IV4-TH-3IP" firstAttribute="top" secondItem="SIf-2w-giR" secondAttribute="bottom" constant="8" id="o0X-UT-b50"/>
                             <constraint firstItem="YiV-xl-Coj" firstAttribute="leading" secondItem="1W5-kt-XY7" secondAttribute="leading" constant="20" id="qQG-bT-Ga9"/>
                             <constraint firstAttribute="trailing" secondItem="C4y-Om-Ol4" secondAttribute="trailing" constant="20" id="rMw-DO-rSW"/>
@@ -133,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZtW-FK-Rcp" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-891" y="762.75"/>
+            <point key="canvasLocation" x="-891" y="762"/>
         </scene>
     </scenes>
 </document>
